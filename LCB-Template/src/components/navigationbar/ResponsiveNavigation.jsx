@@ -4,13 +4,17 @@ import { NavLinks } from "../../data/Navlinks";
 import { Link } from "react-router-dom";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
-const ResponsiveNavigation = ({ open, setOpen }) => {
+const ResponsiveNavigation = ({ open, setOpen, menuIconRef }) => {
   const menuRef = useRef(null);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        (!menuIconRef.current || !menuIconRef.current.contains(event.target))
+      ) {
         setOpen(false);
       }
     };
@@ -45,11 +49,11 @@ const ResponsiveNavigation = ({ open, setOpen }) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 0.3 }}
-          className="absolute top-23 left-0 w-full h-screen z-20"
+          className="absolute top-24 left-1/2 transform -translate-x-1/2 w-[90%] max-w-md bg-slate-300 rounded-3xl shadow-lg z-20"
         >
           <div
             ref={menuRef}
-            className="text-md font-semibold bg-background text-black py-10 m-6 rounded-3xl"
+            className="text-md font-semibold bg-slate-300 text-black py-6 m-6 rounded-3xl h-[400px] overflow-y-auto"
           >
             <ul className="flex flex-col justify-center items-center gap-4 font-mono">
               {NavLinks.map((item) => (

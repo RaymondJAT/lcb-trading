@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import ResponsiveNavigation from "./ResponsiveNavigation";
 import logo from "../../assets/lcb.png";
@@ -6,6 +6,7 @@ import { IoMenuSharp } from "react-icons/io5";
 import { NavLinks } from "../../data/Navlinks";
 
 const NavBar = () => {
+  const menuIconRef = useRef(null);
   const [open, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -25,76 +26,94 @@ const NavBar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full bg-background shadow-md z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 w-full bg-transparent z-50 transition-all duration-300 ${
           isScrolled
             ? "py-3 h-21 xl:py-3 xl:h-21"
-            : "py-4 h-22 md:py-4 md:h-25 xl:py-4 xl:h-26"
+            : "py-4 h-22 md:py-4 md:h-25 xl:py-8 xl:h-26"
         }`}
       >
-        <div className="container flex justify-between items-center transition-all duration-300">
-          {/* Logo */}
-          <div className="text-2xl flex items-center gap-2 font-bold transition-all duration-300">
+        <div className="container flex justify-center items-center gap-8 transition-all duration-300">
+          <div className="flex items-center gap-40">
+            {/* Logo */}
             <Link to="/">
-              <img
-                src={logo}
-                alt="5L Solutions logo"
-                className={`cursor-pointer transition-all duration-300 ${
+              <h1
+                className={`text-green-800 font-[logoFont] cursor-pointer transition-all duration-300 ${
                   isScrolled
-                    ? "w-17 h-14 md:w-20 md:h-16 xl:w-20 xl:h-16"
-                    : "w-19 h-15 md:w-22 md:h-18 xl:w-24 xl:h-18"
+                    ? "text-xl md:text-2xl xl:text-3xl"
+                    : "text-2xl md:text-4xl xl:text-5xl"
                 }`}
-              />
+              >
+                <span className="text-gray-200">LCB</span> TRADING
+              </h1>
             </Link>
-          </div>
-
-          {/* Menu */}
-          <div className="hidden lg:block">
-            <ul className="flex items-center gap-10 text-sm font-bold font-mono tracking-wide text-black relative">
-              {NavLinks.map((item) => (
-                <li key={item.id} className="relative group">
-                  {item.dropdown ? (
-                    <div>
+            {/* Navigation Links */}
+            <div className="hidden lg:block">
+              <ul className="flex items-center gap-8 text-sm font-bold font-mono tracking-wide text-gray-200">
+                {NavLinks.map((item) => (
+                  <li key={item.id} className="relative group">
+                    {item.dropdown ? (
+                      <>
+                        <span className="inline-flex items-center gap-1 cursor-pointer hover:text-primary transition-all duration-200">
+                          {item.title}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-3 w-3"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
+                        </span>
+                        <ul className="absolute left-0 top-full mt-2 bg-white text-black rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-1 group-hover:visible invisible transition-all duration-300 z-50 min-w-[180px] transform">
+                          {item.dropdown.map((dropdownItem) => (
+                            <li key={dropdownItem.id}>
+                              <Link
+                                to={dropdownItem.path}
+                                className="block px-4 py-2 hover:bg-primary hover:text-green-600 transition-all"
+                              >
+                                {dropdownItem.title}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    ) : (
                       <Link
                         to={item.path}
-                        className="hover:text-primary transition-all duration-200 inline-block"
+                        className="hover:text-primary transition-all duration-200"
                       >
                         {item.title}
                       </Link>
-                      <ul className="absolute left-0 top-full mt-2 bg-white text-black rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-300 z-50 min-w-[150px]">
-                        {item.dropdown.map((dropdownItem) => (
-                          <li key={dropdownItem.id}>
-                            <Link
-                              to={dropdownItem.path}
-                              className="block px-4 py-2 hover:bg-primary hover:text-white"
-                            >
-                              {dropdownItem.title}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.path}
-                      className="hover:text-primary duration-200"
-                    >
-                      {item.title}
-                    </Link>
-                  )}
-                </li>
-              ))}
-            </ul>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          {/* Dropdown Menu */}
-          <div className="lg:hidden" onClick={() => setOpen(!open)}>
+          {/* Hamburger */}
+          <div
+            className="lg:hidden ml-auto"
+            onClick={() => setOpen(!open)}
+            ref={menuIconRef}
+          >
             <IoMenuSharp className="text-3xl text-primary cursor-pointer" />
           </div>
         </div>
 
         {/* Responsive Menu */}
         <div className="">
-          <ResponsiveNavigation open={open} setOpen={setOpen} />
+          <ResponsiveNavigation
+            open={open}
+            setOpen={setOpen}
+            menuIconRef={menuIconRef}
+          />
         </div>
       </nav>
     </>

@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: logoFont;
+  src: url(./assets/fonts/Colo-Pro.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
 @utility container {
   margin-inline: auto;
   padding-inline: 1rem;
