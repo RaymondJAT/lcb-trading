@@ -25,10 +25,10 @@
     padding-inline: 4rem;
   }
   @media (width >= theme(--breakpoint-xl)) {
-    padding-inline: 5rem;
+    padding-inline: 10rem;
   }
   @media (width >= theme(--breakpoint-2xl)) {
-    padding-inline: 10rem;
+    padding-inline: 15rem;
   }
 }
 

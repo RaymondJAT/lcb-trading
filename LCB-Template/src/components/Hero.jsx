@@ -14,13 +14,17 @@ const Hero = () => {
 
   return (
     <div
-      className="flex flex-col justify-center items-center h-screen text-center relative"
+      className="flex flex-col justify-center items-center min-h-[85vh] text-center relative z-0 md:h-screen"
       style={backgroundWp}
     >
-      <div className="flex flex-col items-center">
-        <img src={logo} alt="Logo" className="w-52 lg:w-120 h-auto mx-auto" />
+      <div className="container flex flex-col items-center">
+        <img
+          src={logo}
+          alt="Logo"
+          className="w-54 md:w-150 lg:w-110 2xl:w-160 h-auto mx-auto"
+        />
         <p
-          className="mt-6 text-lg xl:text-4xl font-[contentFont] font-semibold text-gray-200 tracking-widest"
+          className="text-lg md:text-4xl xl:text-4xl font-[contentFont] font-semibold text-white tracking-widest"
           style={{
             textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
           }}
