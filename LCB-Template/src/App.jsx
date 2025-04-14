@@ -3,6 +3,7 @@ import NavBar from "./components/navigationbar/NavBar";
 import Hero from "./components/Hero";
 import Partners from "./components/Partners";
 import About from "./components/AboutSection";
+import ChooseUs from "./components/ChooseUs";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <About />
       <Partners />
+      <ChooseUs />
     </>
   );
 }
