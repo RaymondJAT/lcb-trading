@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   return (
-    <div className="pt-30 bg-background -mt-10 relative z-0">
+    <div className="pt-10 bg-background relative z-0">
       <div className="container">
-        <div className="mx-auto  border-b border-green-900/30 pb-6 px-4 max-w-4xl">
+        {/* <div className="mx-auto border-t border-green-900/30 pt-6 px-4 max-w-4xl"> */}
+        <div className="mx-auto px-2 max-w-4xl">
           <h1 className="text-primary font-[titleFont] text-xl tracking-wide uppercase">
             LCB Trading
           </h1>
@@ -27,6 +28,7 @@ const AboutSection = () => {
           >
             Know more →
           </Link>
+          {/* </div> */}
         </div>
       </div>
     </div>

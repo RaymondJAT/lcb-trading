@@ -13,26 +13,24 @@ const Hero = () => {
   };
 
   return (
-    <div className="bg-background">
-      <div
-        className="flex flex-col justify-center items-center min-h-[95vh] text-center relative z-10 md:h-screen "
-        style={backgroundWp}
-      >
-        <div className="container flex flex-col items-center">
-          <img
-            src={logo}
-            alt="Logo"
-            className="w-96 md:w-110 lg:w-120 2xl:w-160 h-auto mt-10 mx-auto"
-          />
-          <h1
-            className="text-xl md:text-3xl lg:text-4xl font-[titleFont] text-white tracking-widest uppercase"
-            style={{
-              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
-            }}
-          >
-            Sealing Across Borders and Delivering Excellence
-          </h1>
-        </div>
+    <div
+      className="flex flex-col justify-center items-center min-h-[95vh] text-center md:h-screen "
+      style={backgroundWp}
+    >
+      <div className="container flex flex-col items-center">
+        <img
+          src={logo}
+          alt="Logo"
+          className="w-96 md:w-110 lg:w-120 h-auto mt-10 mx-auto"
+        />
+        <h1
+          className="text-xl md:text-3xl lg:text-4xl font-[titleFont] text-white tracking-widest uppercase"
+          style={{
+            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
+          }}
+        >
+          Sealing Across Borders and Delivering Excellence
+        </h1>
       </div>
     </div>
   );

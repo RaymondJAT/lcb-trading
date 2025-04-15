@@ -32,7 +32,7 @@ const NavBar = () => {
           visible ? "translate-y-0" : "-translate-y-full"
         } ${
           isScrolled
-            ? "backdrop-blur-md bg-green-900/35 border-b border-green-900/40 rounded-b-[50px] py-3 xl:py-3"
+            ? "backdrop-blur-md bg-green-900/35 border-b border-green-900/40 rounded-b-[30px] lg:rounded-b-full py-5 xl:py-3"
             : "py-4 xl:py-3 bg-transparent border-transparent"
         }`}
       >
