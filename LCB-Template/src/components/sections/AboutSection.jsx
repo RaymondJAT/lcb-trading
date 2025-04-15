@@ -6,7 +6,7 @@ const AboutSection = () => {
     <div className="pt-10 bg-background relative z-0">
       <div className="container">
         {/* <div className="mx-auto border-t border-green-900/30 pt-6 px-4 max-w-4xl"> */}
-        <div className="mx-auto px-2 max-w-4xl">
+        <div className="mx-auto px-2">
           <h1 className="text-primary font-[titleFont] text-xl tracking-wide uppercase">
             LCB Trading
           </h1>

@@ -1,23 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { MarqueeDisplay } from "../data/Marquee";
+import { MarqueeDisplay } from "../../data/Marquee";
 
 const Product = () => {
   const from = "0%";
   const to = "-100%";
 
   return (
-    <div className="pt-10 bg-background">
+    <div className="pt-10 pb-15 bg-background">
       <div className="container">
-        <div className="px-2 font-[titleFont] text-xl uppercase text-primary">
-          <h2>Products</h2>
+        <div className="mx-auto border-green-900/30 px-2">
+          <h2 className="font-[titleFont] text-xl uppercase text-primary">
+            Products
+          </h2>
 
-          <div className="overflow-hidden flex MyGradient">
+          <div className="overflow-hidden flex mt-5 MyGradient">
             {[...Array(2)].map((_, i) => (
               <motion.div
                 key={i}
-                initial={{ x: from }}
-                animate={{ x: to }}
+                initial={{ x: "0%" }}
+                animate={{ x: "-100%" }}
                 transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
                 className="flex flex-shrink-0"
               >

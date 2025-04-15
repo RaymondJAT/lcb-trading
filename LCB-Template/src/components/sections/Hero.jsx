@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../assets/lcb.png";
-import background from "../assets/one.png";
+import logo from "../../assets/lcb.png";
+import background from "../../assets/one.png";
 
 const Hero = () => {
   const backgroundWp = {

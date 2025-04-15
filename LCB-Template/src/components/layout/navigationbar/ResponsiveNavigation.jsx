@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { NavLinks } from "../../data/Navlinks";
+import { NavLinks } from "../../../data/Navlinks";
 import { Link } from "react-router-dom";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 

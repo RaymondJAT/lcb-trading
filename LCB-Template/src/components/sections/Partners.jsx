@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { PartnerList } from "../data/Partnerlist";
+import { PartnerList } from "../../data/Partnerlist";
 
 const Partners = () => {
   return (
     <div className="pt-15 bg-background">
       <div className="container">
-        <div className="mx-auto border-b border-green-900/30 py-6 px-2 max-w-4xl">
+        <div className="mx-auto border-b border-green-900/30 py-6 px-2">
           <h1 className="text-primary pb-2 font-[titleFont] tracking-wide text-xl uppercase">
             Partners
           </h1>

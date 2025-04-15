@@ -1,20 +1,14 @@
 import React from "react";
-import NavBar from "./components/navigationbar/NavBar";
-import Hero from "./components/Hero";
-import Partners from "./components/Partners";
-import About from "./components/AboutSection";
-import ChooseUs from "./components/ChooseUs";
-import Product from "./components/Product";
+import { Outlet } from "react-router-dom";
+import NavBar from "./components/layout/navigationbar/NavBar";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
     <>
       <NavBar />
-      <Hero />
-      <Partners />
-      <About />
-      <ChooseUs />
-      <Product />
+      <Outlet />
+      <Footer />
     </>
   );
 }
