@@ -1,10 +1,10 @@
 import React from "react";
-import Hero from "../components/sections/Hero";
-import Partners from "../components/sections/Partners";
-import AboutSection from "../components/sections/AboutSection";
-import ChooseUs from "../components/sections/ChooseUs";
-import Product from "../components/sections/Product";
-import Contact from "../components/sections/Contact";
+import Hero from "../components/sections/home/Hero";
+import Partners from "../components/sections/home/Partners";
+import AboutSection from "../components/sections/home/AboutSection";
+import ChooseUs from "../components/sections/home/ChooseUs";
+import Product from "../components/sections/home/Product";
+import Contact from "../components/sections/home/Contact";
 
 const Home = () => {
   return (

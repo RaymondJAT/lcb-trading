@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { MarqueeDisplay } from "../../data/Marquee";
+import { MarqueeDisplay } from "../../../data/Marquee";
 
 const Product = () => {
   return (

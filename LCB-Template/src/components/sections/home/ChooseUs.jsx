@@ -1,5 +1,5 @@
 import React from "react";
-import { chooseData } from "../../data/ChooseUs";
+import { chooseData } from "../../../data/ChooseUs";
 
 const ChooseUs = () => {
   return (

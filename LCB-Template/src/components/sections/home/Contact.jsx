@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../ui/Button";
-import background from "../../assets/three.png";
+import Button from "../../ui/Button";
+import background from "../../../assets/three.png";
 
 const Contact = () => {
   const backgroundImg = {

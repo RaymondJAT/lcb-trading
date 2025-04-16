@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { PartnerList } from "../../data/Partnerlist";
+import { PartnerList } from "../../../data/Partnerlist";
 
 const Partners = () => {
   return (
