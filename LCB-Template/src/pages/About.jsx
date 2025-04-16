@@ -2,8 +2,8 @@ import React from "react";
 
 const About = () => {
   return (
-    <div>
-      <div>About Page</div>
+    <div className="bg-background">
+      <div className="h-screen container"></div>
     </div>
   );
 };

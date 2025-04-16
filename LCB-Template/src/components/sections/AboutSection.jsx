@@ -1,7 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Button from "../ui/Button";
 
 const AboutSection = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="pt-10 bg-background relative z-0">
       <div className="container">
@@ -22,12 +25,9 @@ const AboutSection = () => {
             needs.
           </p>
 
-          <Link
-            to="/about"
-            className="inline-block text-[13px] font-[contentFont] text-green-700 hover:underline transition-all duration-200"
-          >
-            Know more →
-          </Link>
+          <Button onClick={() => navigate("/about")} className="text-primary">
+            Know More
+          </Button>
           {/* </div> */}
         </div>
       </div>

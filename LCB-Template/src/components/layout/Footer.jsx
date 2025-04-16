@@ -4,18 +4,18 @@ import logo from "../../assets/lcb.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary border-t pt-10 pb-5">
+    <footer className="bg-primary pt-10 pb-5">
       <div className="container">
-        <div className="mx-auto  px-2">
-          <div className="flex flex-col md:flex-row justify-between items-start gap-10 text-[13px] text-neutral-800 font-[contentFont]">
+        <div className="mx-auto px-2">
+          <div className="flex flex-col md:flex-row md:items-start gap-12 lg:gap-20 text-[13px] font-[contentFont]">
             {/* company about */}
             <div className="flex-1 text-center md:text-left">
               <img
                 src={logo}
                 alt="LCB Logo"
-                className="h-[60px] mb-4 mx-auto md:mx-0"
+                className="h-[65px] mb-4 mx-auto md:mx-0"
               />
-              <p className="leading-relaxed text-white">
+              <p className="leading-relaxed text-white max-w-md mx-auto md:mx-0">
                 LCB Trading Company is a trusted and dynamic trading partner
                 committed to delivering high-quality goods and services across
                 various industries.
@@ -23,7 +23,7 @@ const Footer = () => {
             </div>
 
             {/* quick links */}
-            <div className="flex-1 text-center">
+            <div className="flex-1 text-center md:text-left md:pl-5">
               <h4 className="text-white font-[titleFont] text-sm uppercase mb-4">
                 Quick Links
               </h4>
@@ -48,8 +48,10 @@ const Footer = () => {
 
             {/* contact */}
             <div className="flex-1 text-center md:text-left text-white">
-              <h4 className="font-[titleFont] text-sm uppercase">Contact</h4>
-              <p className="pt-4 pb-5">☎︎ 02-8709-98-96</p>
+              <h4 className="font-[titleFont] text-sm uppercase mb-4">
+                Contact
+              </h4>
+              <p className="pt-4 md:pt-0 pb-2">☎︎ 02-8709-98-96</p>
               <p>🏠︎ 57 Macaria Ave. Ph 3B Pacita Complex, Biñan, Laguna</p>
             </div>
           </div>

@@ -3,14 +3,11 @@ import { motion } from "framer-motion";
 import { MarqueeDisplay } from "../../data/Marquee";
 
 const Product = () => {
-  const from = "0%";
-  const to = "-100%";
-
   return (
     <div className="pt-10 pb-15 bg-background">
       <div className="container">
         <div className="mx-auto border-green-900/30 px-2">
-          <h2 className="font-[titleFont] text-xl uppercase text-primary">
+          <h2 className="font-[titleFont] text-xl uppercase text-primary tracking-wide">
             Products
           </h2>
 

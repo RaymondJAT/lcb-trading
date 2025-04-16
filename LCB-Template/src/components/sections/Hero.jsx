@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <div
-      className="flex flex-col justify-center items-center min-h-[95vh] text-center md:h-screen "
+      className="flex flex-col justify-center items-center min-h-[90vh] text-center md:h-screen "
       style={backgroundWp}
     >
       <div className="container flex flex-col items-center">
@@ -24,7 +24,7 @@ const Hero = () => {
           className="w-96 md:w-110 lg:w-120 h-auto mt-10 mx-auto"
         />
         <h1
-          className="text-xl md:text-3xl lg:text-4xl font-[titleFont] text-white tracking-widest uppercase"
+          className="text-xl md:text-3xl lg:text-4xl font-[titleFont] text-slate-100 tracking-widest uppercase"
           style={{
             textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)",
           }}

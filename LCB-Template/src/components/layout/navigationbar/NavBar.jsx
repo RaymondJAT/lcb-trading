@@ -28,17 +28,17 @@ const NavBar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${
+        className={`fixed top-0 left-0 w-full z-50 transition-transform duration-500 ease-in-out ${
           visible ? "translate-y-0" : "-translate-y-full"
         } ${
           isScrolled
-            ? "backdrop-blur-md bg-primary py-5 xl:py-3"
-            : "py-4 xl:py-3 bg-transparent border-transparent"
+            ? "backdrop-blur-md bg-green-950/50 border-b border-green-500/20 shadow-sm py-4"
+            : "bg-green-950/50 backdrop-blur-md border-b border-green-500/10 shadow-sm py-4"
         }`}
       >
         <div className="container">
           <div className="grid grid-cols-2 lg:grid-cols-3 items-center transition-all duration-300 uppercase">
-            <ul className="hidden lg:flex justify-end items-center gap-x-20 text-xs font-[contentFont] tracking-wide text-white">
+            <ul className="hidden lg:flex justify-end items-center gap-x-20 text-xs font-[contentFont] tracking-wide text-slate-100">
               {leftLinks.map((item) => (
                 <li key={item.id} className="relative group">
                   {item.dropdown ? (
@@ -51,7 +51,7 @@ const NavBar = () => {
                           <li key={dropdownItem.id}>
                             <Link
                               to={dropdownItem.path}
-                              className="block px-4 py-2 hover:bg-primary hover:text-white transition-all"
+                              className="block px-4 py-2 hover:bg-primary hover:text-slate-100 transition-all"
                             >
                               {dropdownItem.title}
                             </Link>
@@ -78,7 +78,7 @@ const NavBar = () => {
                     : "text-2xl md:text-3xl xl:text-4xl"
                 }`}
               >
-                <span className="lg:block text-white">LCB</span> TRADING
+                <span className="lg:block text-slate-100">LCB</span> TRADING
               </h1>
             </Link>
             <ul className="hidden lg:flex justify-start items-center gap-x-20 text-xs font-[contentFont] tracking-wide text-gray-200">
@@ -93,7 +93,7 @@ const NavBar = () => {
                 </li>
               ))}
             </ul>
-            <div className="lg:hidden flex justify-end px-4 text-white">
+            <div className="lg:hidden flex justify-end px-4 text-slate-100">
               <IoMenuSharp
                 className="text-2xl cursor-pointer"
                 onClick={() => setOpen(!open)}
